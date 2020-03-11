@@ -1,0 +1,16 @@
+C:\Users\milky\source\repos\Kritzel\Kritzel\obj\x86\Debug\Kritzel.csprojAssemblyReference.cache
+C:\Users\milky\source\repos\Kritzel\Kritzel\obj\x86\Debug\Kritzel.BrushCreator.resources
+C:\Users\milky\source\repos\Kritzel\Kritzel\obj\x86\Debug\Kritzel.Dialogues.ImageImporter.resources
+C:\Users\milky\source\repos\Kritzel\Kritzel\obj\x86\Debug\Kritzel.Dialogues.LayoutEditor.resources
+C:\Users\milky\source\repos\Kritzel\Kritzel\obj\x86\Debug\Kritzel.Dialogues.ProgressWindow.resources
+C:\Users\milky\source\repos\Kritzel\Kritzel\obj\x86\Debug\Kritzel.Dialogues.Sizes.resources
+C:\Users\milky\source\repos\Kritzel\Kritzel\obj\x86\Debug\Kritzel.GUIElements.BackgroundSelectPanel.resources
+C:\Users\milky\source\repos\Kritzel\Kritzel\obj\x86\Debug\Kritzel.GUIElements.DocumentOverview.resources
+C:\Users\milky\source\repos\Kritzel\Kritzel\obj\x86\Debug\Kritzel.MainWindow.resources
+C:\Users\milky\source\repos\Kritzel\Kritzel\obj\x86\Debug\Kritzel.Measurement.resources
+C:\Users\milky\source\repos\Kritzel\Kritzel\obj\x86\Debug\Kritzel.PickerMenu.resources
+C:\Users\milky\source\repos\Kritzel\Kritzel\obj\x86\Debug\Kritzel.Properties.Resources.resources
+C:\Users\milky\source\repos\Kritzel\Kritzel\obj\x86\Debug\Kritzel.SplineView.resources
+C:\Users\milky\source\repos\Kritzel\Kritzel\obj\x86\Debug\Kritzel.ViewControl.resources
+C:\Users\milky\source\repos\Kritzel\Kritzel\obj\x86\Debug\Kritzel.csproj.GenerateResource.cache
+C:\Users\milky\source\repos\Kritzel\Kritzel\obj\x86\Debug\Kritzel.csproj.CoreCompileInputs.cache

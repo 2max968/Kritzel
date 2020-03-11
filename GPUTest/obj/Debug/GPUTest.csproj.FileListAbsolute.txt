@@ -1,0 +1,14 @@
+C:\Users\milky\source\repos\Kritzel\GPUTest\bin\Debug\GPUTest.exe.config
+C:\Users\milky\source\repos\Kritzel\GPUTest\bin\Debug\GPUTest.exe
+C:\Users\milky\source\repos\Kritzel\GPUTest\bin\Debug\GPUTest.pdb
+C:\Users\milky\source\repos\Kritzel\GPUTest\bin\Debug\SlimDX.dll
+C:\Users\milky\source\repos\Kritzel\GPUTest\bin\Debug\SlimDX.pdb
+C:\Users\milky\source\repos\Kritzel\GPUTest\bin\Debug\SlimDX.xml
+C:\Users\milky\source\repos\Kritzel\GPUTest\obj\Debug\GPUTest.csprojAssemblyReference.cache
+C:\Users\milky\source\repos\Kritzel\GPUTest\obj\Debug\GPUTest.Form1.resources
+C:\Users\milky\source\repos\Kritzel\GPUTest\obj\Debug\GPUTest.Properties.Resources.resources
+C:\Users\milky\source\repos\Kritzel\GPUTest\obj\Debug\GPUTest.csproj.GenerateResource.cache
+C:\Users\milky\source\repos\Kritzel\GPUTest\obj\Debug\GPUTest.csproj.CoreCompileInputs.cache
+C:\Users\milky\source\repos\Kritzel\GPUTest\obj\Debug\GPUTest.csproj.CopyComplete
+C:\Users\milky\source\repos\Kritzel\GPUTest\obj\Debug\GPUTest.exe
+C:\Users\milky\source\repos\Kritzel\GPUTest\obj\Debug\GPUTest.pdb

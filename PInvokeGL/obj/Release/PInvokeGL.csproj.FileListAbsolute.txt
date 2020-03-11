@@ -1,0 +1,7 @@
+C:\Users\milky\source\repos\Kritzel\PInvokeGL\bin\Release\nativegl.dll
+C:\Users\milky\source\repos\Kritzel\PInvokeGL\bin\Release\PInvokeGL.dll
+C:\Users\milky\source\repos\Kritzel\PInvokeGL\bin\Release\PInvokeGL.pdb
+C:\Users\milky\source\repos\Kritzel\PInvokeGL\obj\Release\PInvokeGL.csprojAssemblyReference.cache
+C:\Users\milky\source\repos\Kritzel\PInvokeGL\obj\Release\PInvokeGL.csproj.CoreCompileInputs.cache
+C:\Users\milky\source\repos\Kritzel\PInvokeGL\obj\Release\PInvokeGL.dll
+C:\Users\milky\source\repos\Kritzel\PInvokeGL\obj\Release\PInvokeGL.pdb

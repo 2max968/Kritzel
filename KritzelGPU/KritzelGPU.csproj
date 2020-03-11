@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B5065B9D-B683-4505-8B7E-BEA2E615614F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Kritzel</RootNamespace>
+    <AssemblyName>KritzelGPU</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetPlatformVersion>8.0</TargetPlatformVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\..\..\Desktop\Debug\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp-gdi">
+      <HintPath>..\..\..\libs\PdfSharp-gdi.dll</HintPath>
+    </Reference>
+    <Reference Include="PointerInputLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PointerAPI\PointerInputLibrary\bin\Release\PointerInputLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Backgrounds\Background.cs" />
+    <Compile Include="Backgrounds\BackgroundQuadPaper10mm.cs" />
+    <Compile Include="Backgrounds\BackgroundBorder.cs" />
+    <Compile Include="Backgrounds\BackgroundQuadPaper5mm.cs" />
+    <Compile Include="Backgrounds\BackgroundRiledPaper15mm.cs" />
+    <Compile Include="Backgrounds\BackgroundRuledTitle15mm.cs" />
+    <Compile Include="BrushCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrushCreator.Designer.cs">
+      <DependentUpon>BrushCreator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogues\ImageImporter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogues\ImageImporter.Designer.cs">
+      <DependentUpon>ImageImporter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogues\LayoutEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogues\LayoutEditor.Designer.cs">
+      <DependentUpon>LayoutEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogues\PageAdder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogues\PageAdder.Designer.cs">
+      <DependentUpon>PageAdder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogues\PDFImporter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogues\PDFImporter.Designer.cs">
+      <DependentUpon>PDFImporter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogues\ProgressWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogues\ProgressWindow.Designer.cs">
+      <DependentUpon>ProgressWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogues\Sizes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogues\Sizes.Designer.cs">
+      <DependentUpon>Sizes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Arc.cs" />
+    <Compile Include="Forms\Rect.cs" />
+    <Compile Include="GUIElements\BackgroundSelectPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUIElements\BackgroundSelectPanel.Designer.cs">
+      <DependentUpon>BackgroundSelectPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIElements\ColorPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUIElements\ColorPicker.Designer.cs">
+      <DependentUpon>ColorPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIElements\DocumentOverview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUIElements\DocumentOverview.Designer.cs">
+      <DependentUpon>DocumentOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIElements\FileMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUIElements\FileMenu.Designer.cs">
+      <DependentUpon>FileMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KDocument.cs" />
+    <Compile Include="KPage.cs" />
+    <Compile Include="Line.cs" />
+    <Compile Include="Forms\LinearLine.cs" />
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Matrix3x3.cs" />
+    <Compile Include="MatrixException.cs" />
+    <Compile Include="MatrixNxM.cs" />
+    <Compile Include="Measurement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Measurement.Designer.cs">
+      <DependentUpon>Measurement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MuPDF\PageRenderer.cs" />
+    <Compile Include="MuPDF\Structures.cs" />
+    <Compile Include="Native.cs" />
+    <Compile Include="PageFormat.cs" />
+    <Compile Include="PBrush.cs" />
+    <Compile Include="GUIElements\PickerMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUIElements\PickerMenu.Designer.cs">
+      <DependentUpon>PickerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Renderer\GdiRenderer.cs" />
+    <Compile Include="Renderer\GPURenderer.cs" />
+    <Compile Include="Renderer\GPURenderer3.cs" />
+    <Compile Include="Renderer\GPURenderer1.cs" />
+    <Compile Include="Renderer\GPURenderer2.cs" />
+    <Compile Include="Renderer\Image.cs" />
+    <Compile Include="Renderer\PdfRenderer.cs" />
+    <Compile Include="Renderer\RenderBitmap.cs" />
+    <Compile Include="Renderer\Renderer.cs" />
+    <Compile Include="ScreenExtensions.cs" />
+    <Compile Include="Spline.cs" />
+    <Compile Include="Spline2D.cs" />
+    <Compile Include="GUIElements\InkControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FingerTransform.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="ViewControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewControl.Designer.cs">
+      <DependentUpon>ViewControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BrushCreator.resx">
+      <DependentUpon>BrushCreator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogues\ImageImporter.resx">
+      <DependentUpon>ImageImporter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogues\LayoutEditor.resx">
+      <DependentUpon>LayoutEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogues\PageAdder.resx">
+      <DependentUpon>PageAdder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogues\PDFImporter.resx">
+      <DependentUpon>PDFImporter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogues\ProgressWindow.resx">
+      <DependentUpon>ProgressWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogues\Sizes.resx">
+      <DependentUpon>Sizes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIElements\BackgroundSelectPanel.resx">
+      <DependentUpon>BackgroundSelectPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIElements\ColorPicker.resx">
+      <DependentUpon>ColorPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIElements\DocumentOverview.resx">
+      <DependentUpon>DocumentOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIElements\FileMenu.resx">
+      <DependentUpon>FileMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Measurement.resx">
+      <DependentUpon>Measurement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIElements\PickerMenu.resx">
+      <DependentUpon>PickerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewControl.resx">
+      <DependentUpon>ViewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="app.manifest" />
+    <None Include="colors.cfg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="OpenTK.dll.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vertex.vs.txt" />
+    <None Include="Resources\page.png" />
+    <None Include="Resources\Rotate.png" />
+    <None Include="Resources\Resize.png" />
+    <None Include="Resources\Move.png" />
+    <None Include="Resources\arrow_down.png" />
+    <None Include="Resources\arrow_up.png" />
+    <Content Include="MuPDFLib.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\ArrowsExpand.png" />
+    <None Include="Resources\arrowShrink.png" />
+    <None Include="Resources\Menu.png" />
+    <None Include="Resources\Menu1.png" />
+    <None Include="Resources\icoMenu.png" />
+    <None Include="Resources\feltpen.png" />
+    <Content Include="nativegl.dll" />
+    <None Include="Resources\ellipse_fs.txt" />
+    <Content Include="Resources\mutool.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PInvokeGL\PInvokeGL.csproj">
+      <Project>{7ef2a02b-c985-447e-a439-7fbab9d9cab2}</Project>
+      <Name>PInvokeGL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
