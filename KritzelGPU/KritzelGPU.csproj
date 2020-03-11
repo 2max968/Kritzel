@@ -64,10 +64,6 @@
     <Reference Include="PdfSharp-gdi">
       <HintPath>..\..\..\libs\PdfSharp-gdi.dll</HintPath>
     </Reference>
-    <Reference Include="PointerInputLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PointerAPI\PointerInputLibrary\bin\Release\PointerInputLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -316,6 +312,10 @@
     <ProjectReference Include="..\PInvokeGL\PInvokeGL.csproj">
       <Project>{7ef2a02b-c985-447e-a439-7fbab9d9cab2}</Project>
       <Name>PInvokeGL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PointerInputLibrary\PointerInputLibrary.csproj">
+      <Project>{cb70de98-f535-4c66-b90f-7ad99179f2b1}</Project>
+      <Name>PointerInputLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
