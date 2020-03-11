@@ -1,0 +1,12 @@
+C:\Users\milky\source\repos\PointerAPI\PointerInputLibrary\bin\x86\Debug\PointerInputLibrary.dll
+C:\Users\milky\source\repos\PointerAPI\PointerInputLibrary\bin\x86\Debug\PointerInputLibrary.pdb
+C:\Users\milky\source\repos\PointerAPI\PointerInputLibrary\obj\x86\Debug\PointerInputLibrary.csproj.CoreCompileInputs.cache
+C:\Users\milky\source\repos\PointerAPI\PointerInputLibrary\obj\x86\Debug\PointerInputLibrary.dll
+C:\Users\milky\source\repos\PointerAPI\PointerInputLibrary\obj\x86\Debug\PointerInputLibrary.pdb
+C:\Users\milky\source\repos\PointerAPI\PointerInputLibrary\obj\x86\Debug\PointerInputLibrary.csprojAssemblyReference.cache
+C:\Users\milky\source\repos\Kritzel\PointerInputLibrary\bin\x86\Debug\PointerInputLibrary.dll
+C:\Users\milky\source\repos\Kritzel\PointerInputLibrary\bin\x86\Debug\PointerInputLibrary.pdb
+C:\Users\milky\source\repos\Kritzel\PointerInputLibrary\obj\x86\Debug\PointerInputLibrary.csprojAssemblyReference.cache
+C:\Users\milky\source\repos\Kritzel\PointerInputLibrary\obj\x86\Debug\PointerInputLibrary.csproj.CoreCompileInputs.cache
+C:\Users\milky\source\repos\Kritzel\PointerInputLibrary\obj\x86\Debug\PointerInputLibrary.dll
+C:\Users\milky\source\repos\Kritzel\PointerInputLibrary\obj\x86\Debug\PointerInputLibrary.pdb

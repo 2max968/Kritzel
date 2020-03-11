@@ -1,0 +1,6 @@
+C:\Users\milky\source\repos\PointerAPI\PointerInputLibrary\bin\Release\PointerInputLibrary.dll
+C:\Users\milky\source\repos\PointerAPI\PointerInputLibrary\bin\Release\PointerInputLibrary.pdb
+C:\Users\milky\source\repos\PointerAPI\PointerInputLibrary\obj\Release\PointerInputLibrary.csprojAssemblyReference.cache
+C:\Users\milky\source\repos\PointerAPI\PointerInputLibrary\obj\Release\PointerInputLibrary.csproj.CoreCompileInputs.cache
+C:\Users\milky\source\repos\PointerAPI\PointerInputLibrary\obj\Release\PointerInputLibrary.dll
+C:\Users\milky\source\repos\PointerAPI\PointerInputLibrary\obj\Release\PointerInputLibrary.pdb
