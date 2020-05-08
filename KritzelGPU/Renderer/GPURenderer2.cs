@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 
-namespace Kritzel.Renderer
+namespace Kritzel.Main.Renderer
 {
     public class GPURenderer2 : GPURenderer
     {

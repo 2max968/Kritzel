@@ -1,4 +1,4 @@
-﻿using PInvokeGL;
+﻿using Kritzel.GLRenderer;
 using System;
 using System.Collections.Generic;
 using System.Drawing.Imaging;
@@ -11,7 +11,7 @@ using SlimDX;
 #endif
 using gdi = System.Drawing;
 
-namespace Kritzel.Renderer
+namespace Kritzel.Main.Renderer
 {
     public class Image : IDisposable
     {
@@ -34,7 +34,7 @@ namespace Kritzel.Renderer
         ~Image()
         {
             if (GLTextureID != 0)
-                PInvokeGL.Util.Leackage(this);
+                Kritzel.GLRenderer.Util.Leackage(this);
         }
 
 #if SLIMDX
@@ -96,7 +96,7 @@ namespace Kritzel.Renderer
         public void LoadGPU()
         {
             UnloadGPU();
-            int id = PInvokeGL.Util.LoadTexture(GdiBitmap);
+            int id = Kritzel.GLRenderer.Util.LoadTexture(GdiBitmap);
             GLTextureID = id;
         }
 

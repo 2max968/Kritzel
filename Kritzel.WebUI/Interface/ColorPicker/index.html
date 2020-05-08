@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Colors</title>
+        <link href="/global/style.css" rel="stylesheet" />
+        <link href="/cpStyle.css" rel="stylesheet" />
+
+        <script src="/hslToHex.js"></script>
+
+        <script>
+            var HUE_STEPS = 15;
+            var L_STEPS = 4;
+            var SAT_STEPS = 4;
+        </script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div id="hueContainer">
+                
+            </div>
+            <div id="grid">
+
+            </div>
+        </div>
+
+        <form method="get" action="/ok">
+            <input type="hidden" name="color" value="000000" />
+            <input type="hidden" name="more" value="true" />
+            <input type="submit" value="More colors" id="btnCancel" />
+        </form>
+        <form method="get" action="/cancel">
+            <input type="submit" value="Close" id="btnOK" />
+        </form>
+
+        <script src="/script.js"></script>
+    </body>
+</html>

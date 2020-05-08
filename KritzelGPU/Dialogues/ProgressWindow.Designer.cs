@@ -1,4 +1,4 @@
-﻿namespace Kritzel.Dialogues
+﻿namespace Kritzel.Main.Dialogues
 {
     partial class ProgressWindow
     {

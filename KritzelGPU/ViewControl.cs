@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
-using PointerInputLibrary;
+using Kritzel.PointerInputLibrary;
 
-namespace Kritzel
+namespace Kritzel.Main
 {
     public partial class ViewControl : Form
     {

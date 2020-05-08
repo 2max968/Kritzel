@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using Kritzel.WebUI;
 
-namespace Kritzel.GUIElements
+namespace Kritzel.Main.GUIElements
 {
     public partial class FileMenu : UserControl
     {
@@ -72,7 +73,9 @@ namespace Kritzel.GUIElements
                 if (ext == ".zip")
                 {
                     KDocument doc = new KDocument();
-                    doc.LoadDocument(diagOpenDoc.FileName);
+                    MessageLog log = new MessageLog();
+                    doc.LoadDocument(diagOpenDoc.FileName, log);
+                    Console.WriteLine(log);
                     document = doc;
                     window.SetDocument(document);
                 }
@@ -158,8 +161,26 @@ namespace Kritzel.GUIElements
 
         private void btnAddPage_Click(object sender, EventArgs e)
         {
-            Dialogues.PageAdder pa = new Dialogues.PageAdder(control, document);
-            pa.ShowDialog(window);
+            //Dialogues.PageAdder pa = new Dialogues.PageAdder(control, document);
+            //pa.ShowDialog(window);
+            WebDialog wd = new WebDialog("Interface/AddPage.zip");
+            wd["formats"] = PageFormat.GetFormats().Keys.ToArray();
+            wd["currentFormat"] = "A4";
+            if(wd.ShowDialog() == DialogResult.OK)
+            {
+                int pindex = document.Pages.IndexOf(control.Page);
+                int index = pindex;
+                if (wd["POS", "1"] == "2")
+                    index = pindex + 1;
+                else if (wd["POS", "1"] == "3")
+                    index = document.Pages.Count;
+
+                KPage page = new KPage();
+                string formatStr = wd["FORMAT", "A4"].Replace("+", " ");
+                if (PageFormat.GetFormats().ContainsKey(formatStr)) page.Format = PageFormat.GetFormats()[formatStr];
+                document.Pages.Insert(index, page);
+                control.LoadPage(page);
+            }
         }
     }
 }

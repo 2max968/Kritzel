@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Kritzel.GUIElements
+namespace Kritzel.Main.GUIElements
 {
     public partial class DocumentOverview : UserControl
     {

@@ -1,0 +1,27 @@
+.css text/css
+.htm text/html
+.html text/html
+.htmls text/html
+.js text/javascript
+.shtml text/html
+.txt text/plain
+
+.exe application/octec-stream
+.gz application/x-gzip
+.tar application/x-tar
+.gtar application/x-gtar
+.pdf application/pdf
+.tgz application/gnutar
+.zip application/zip
+
+.bmp image/bmp
+.gif image/gif
+.jpe image/jpeg
+.jpg image/jpeg
+.jpeg image/jpeg
+.png image/png
+.tif image/tiff
+
+.mp3 audio/mpeg3
+.wav audio/wav
+.mp4 video/mp4

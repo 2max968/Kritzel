@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B5065B9D-B683-4505-8B7E-BEA2E615614F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Kritzel</RootNamespace>
-    <AssemblyName>KritzelGPU</AssemblyName>
+    <RootNamespace>Kritzel.Main</RootNamespace>
+    <AssemblyName>Kritzel</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetPlatformVersion>8.0</TargetPlatformVersion>
@@ -101,11 +101,18 @@
     <Compile Include="Dialogues\LayoutEditor.Designer.cs">
       <DependentUpon>LayoutEditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialogues\MsgBox.cs" />
     <Compile Include="Dialogues\PageAdder.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dialogues\PageAdder.Designer.cs">
       <DependentUpon>PageAdder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogues\PageList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogues\PageList.Designer.cs">
+      <DependentUpon>PageList.cs</DependentUpon>
     </Compile>
     <Compile Include="Dialogues\PDFImporter.cs">
       <SubType>Form</SubType>
@@ -170,6 +177,7 @@
     <Compile Include="Measurement.Designer.cs">
       <DependentUpon>Measurement.cs</DependentUpon>
     </Compile>
+    <Compile Include="MessageLog.cs" />
     <Compile Include="MuPDF\PageRenderer.cs" />
     <Compile Include="MuPDF\Structures.cs" />
     <Compile Include="Native.cs" />
@@ -222,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogues\PageAdder.resx">
       <DependentUpon>PageAdder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogues\PageList.resx">
+      <DependentUpon>PageList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogues\PDFImporter.resx">
       <DependentUpon>PDFImporter.cs</DependentUpon>
@@ -288,6 +299,7 @@
     <None Include="Resources\Rect.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\pen2.png" />
     <None Include="Resources\vertex.vs.txt" />
     <None Include="Resources\page.png" />
     <None Include="Resources\Rotate.png" />
@@ -309,13 +321,17 @@
     <Content Include="Resources\mutool.exe" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PInvokeGL\PInvokeGL.csproj">
+    <ProjectReference Include="..\Kritzel.GLRenderer\Kritzel.GLRenderer.csproj">
       <Project>{7ef2a02b-c985-447e-a439-7fbab9d9cab2}</Project>
-      <Name>PInvokeGL</Name>
+      <Name>Kritzel.GLRenderer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PointerInputLibrary\PointerInputLibrary.csproj">
+    <ProjectReference Include="..\Kritzel.PointerInputLibrary\Kritzel.PointerInputLibrary.csproj">
       <Project>{cb70de98-f535-4c66-b90f-7ad99179f2b1}</Project>
-      <Name>PointerInputLibrary</Name>
+      <Name>Kritzel.PointerInputLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kritzel.WebUI\Kritzel.WebUI.csproj">
+      <Project>{360d50ae-7898-4fa3-b590-2cf3e8621b73}</Project>
+      <Name>Kritzel.WebUI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

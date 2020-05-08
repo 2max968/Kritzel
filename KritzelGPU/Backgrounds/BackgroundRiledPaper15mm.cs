@@ -4,9 +4,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Kritzel.Renderer;
+using Kritzel.Main.Renderer;
 
-namespace Kritzel.Backgrounds
+namespace Kritzel.Main.Backgrounds
 {
     [BName("Ruled 15mm")]
     public class BackgroundRiledPaper15mm : Background

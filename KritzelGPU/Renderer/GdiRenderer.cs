@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kritzel.Renderer
+namespace Kritzel.Main.Renderer
 {
     public class GdiRenderer : BaseRenderer
     {

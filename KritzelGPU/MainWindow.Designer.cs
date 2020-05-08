@@ -1,4 +1,4 @@
-﻿namespace Kritzel
+﻿namespace Kritzel.Main
 {
     partial class MainWindow
     {
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.panelTop = new System.Windows.Forms.Panel();
             this.panelTopMid = new System.Windows.Forms.Panel();
-            this.colorPicker1 = new Kritzel.GUIElements.ColorPicker();
+            this.colorPicker1 = new Kritzel.Main.GUIElements.ColorPicker();
             this.panelTopRight = new System.Windows.Forms.Panel();
             this.btnFormType = new System.Windows.Forms.Button();
             this.btnLayout = new System.Windows.Forms.Button();
@@ -49,10 +49,10 @@
             this.lineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rectangleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diagOpenDoc = new System.Windows.Forms.OpenFileDialog();
-            this.pageSelect = new Kritzel.PickerMenu();
-            this.pmControl = new Kritzel.PickerMenu();
-            this.pickerMenu1 = new Kritzel.PickerMenu();
-            this.inkControl1 = new Kritzel.InkControl();
+            this.pageSelect = new Kritzel.Main.PickerMenu();
+            this.pmControl = new Kritzel.Main.PickerMenu();
+            this.pickerMenu1 = new Kritzel.Main.PickerMenu();
+            this.inkControl1 = new Kritzel.Main.InkControl();
             this.panelTop.SuspendLayout();
             this.panelTopMid.SuspendLayout();
             this.panelTopRight.SuspendLayout();
@@ -104,8 +104,10 @@
             // 
             // btnFormType
             // 
+            this.btnFormType.BackgroundImage = global::Kritzel.Main.Properties.Resources.Pen;
+            this.btnFormType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnFormType.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnFormType.Image = global::Kritzel.Properties.Resources.Pen;
+            this.btnFormType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFormType.Location = new System.Drawing.Point(0, 0);
             this.btnFormType.Name = "btnFormType";
             this.btnFormType.Size = new System.Drawing.Size(64, 64);
@@ -115,8 +117,10 @@
             // 
             // btnLayout
             // 
+            this.btnLayout.BackgroundImage = global::Kritzel.Main.Properties.Resources.page;
+            this.btnLayout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnLayout.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnLayout.Image = global::Kritzel.Properties.Resources.page;
+            this.btnLayout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLayout.Location = new System.Drawing.Point(64, 0);
             this.btnLayout.Name = "btnLayout";
             this.btnLayout.Size = new System.Drawing.Size(64, 64);
@@ -126,8 +130,10 @@
             // 
             // btnFullscreen
             // 
+            this.btnFullscreen.BackgroundImage = global::Kritzel.Main.Properties.Resources.ArrowsExpand;
+            this.btnFullscreen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnFullscreen.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnFullscreen.Image = global::Kritzel.Properties.Resources.ArrowsExpand;
+            this.btnFullscreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFullscreen.Location = new System.Drawing.Point(128, 0);
             this.btnFullscreen.Name = "btnFullscreen";
             this.btnFullscreen.Size = new System.Drawing.Size(64, 64);
@@ -157,8 +163,10 @@
             // 
             // btnFile
             // 
+            this.btnFile.BackgroundImage = global::Kritzel.Main.Properties.Resources.icoMenu;
+            this.btnFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnFile.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnFile.Image = global::Kritzel.Properties.Resources.icoMenu;
+            this.btnFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFile.Location = new System.Drawing.Point(0, 0);
             this.btnFile.Name = "btnFile";
             this.btnFile.Size = new System.Drawing.Size(64, 64);
@@ -215,7 +223,7 @@
             // 
             // strokeToolStripMenuItem
             // 
-            this.strokeToolStripMenuItem.Image = global::Kritzel.Properties.Resources.Pen;
+            this.strokeToolStripMenuItem.Image = global::Kritzel.Main.Properties.Resources.Pen;
             this.strokeToolStripMenuItem.Name = "strokeToolStripMenuItem";
             this.strokeToolStripMenuItem.Size = new System.Drawing.Size(168, 30);
             this.strokeToolStripMenuItem.Text = "Stroke";
@@ -223,7 +231,7 @@
             // 
             // lineToolStripMenuItem
             // 
-            this.lineToolStripMenuItem.Image = global::Kritzel.Properties.Resources.Line;
+            this.lineToolStripMenuItem.Image = global::Kritzel.Main.Properties.Resources.Line;
             this.lineToolStripMenuItem.Name = "lineToolStripMenuItem";
             this.lineToolStripMenuItem.Size = new System.Drawing.Size(168, 30);
             this.lineToolStripMenuItem.Text = "Line";
@@ -231,7 +239,7 @@
             // 
             // rectangleToolStripMenuItem
             // 
-            this.rectangleToolStripMenuItem.Image = global::Kritzel.Properties.Resources.Rect;
+            this.rectangleToolStripMenuItem.Image = global::Kritzel.Main.Properties.Resources.Rect;
             this.rectangleToolStripMenuItem.Name = "rectangleToolStripMenuItem";
             this.rectangleToolStripMenuItem.Size = new System.Drawing.Size(168, 30);
             this.rectangleToolStripMenuItem.Text = "Rectangle";
@@ -247,11 +255,11 @@
             this.pageSelect.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pageSelect.Location = new System.Drawing.Point(12, 204);
             this.pageSelect.Name = "pageSelect";
-            this.pageSelect.Orientation = Kritzel.PickerOrientation.Vertical;
+            this.pageSelect.Orientation = Kritzel.Main.PickerOrientation.Vertical;
             this.pageSelect.Selected = 0;
             this.pageSelect.Size = new System.Drawing.Size(64, 256);
             this.pageSelect.TabIndex = 8;
-            this.pageSelect.Type = Kritzel.PickerType.Click;
+            this.pageSelect.Type = Kritzel.Main.PickerType.Click;
             // 
             // pmControl
             // 
@@ -259,28 +267,28 @@
             this.pmControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pmControl.Location = new System.Drawing.Point(800, 204);
             this.pmControl.Name = "pmControl";
-            this.pmControl.Orientation = Kritzel.PickerOrientation.Vertical;
+            this.pmControl.Orientation = Kritzel.Main.PickerOrientation.Vertical;
             this.pmControl.Selected = 0;
             this.pmControl.Size = new System.Drawing.Size(64, 256);
             this.pmControl.TabIndex = 7;
-            this.pmControl.Type = Kritzel.PickerType.Check;
+            this.pmControl.Type = Kritzel.Main.PickerType.Check;
             // 
             // pickerMenu1
             // 
             this.pickerMenu1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pickerMenu1.Location = new System.Drawing.Point(12, 134);
             this.pickerMenu1.Name = "pickerMenu1";
-            this.pickerMenu1.Orientation = Kritzel.PickerOrientation.Horizontal;
+            this.pickerMenu1.Orientation = Kritzel.Main.PickerOrientation.Horizontal;
             this.pickerMenu1.Selected = 0;
             this.pickerMenu1.Size = new System.Drawing.Size(256, 64);
             this.pickerMenu1.TabIndex = 1;
-            this.pickerMenu1.Type = Kritzel.PickerType.Select;
+            this.pickerMenu1.Type = Kritzel.Main.PickerType.Select;
             // 
             // inkControl1
             // 
             this.inkControl1.BufferSize = 1F;
             this.inkControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.inkControl1.InkMode = Kritzel.InkMode.Pen;
+            this.inkControl1.InkMode = Kritzel.Main.InkMode.Pen;
             this.inkControl1.Location = new System.Drawing.Point(0, 64);
             this.inkControl1.LockDraw = false;
             this.inkControl1.LockMove = false;
@@ -304,6 +312,7 @@
             this.Controls.Add(this.panelTop);
             this.Name = "MainWindow";
             this.Text = "Kritzel";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();

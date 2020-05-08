@@ -9,11 +9,11 @@ using dxgi = SlimDX.DXGI;
 using d2d = SlimDX.Direct2D;
 #endif
 #if (OPENGL)
-using PInvokeGL;
+using Kritzel.GLRenderer;
 #endif
 using gdi = System.Drawing;
 
-namespace Kritzel.Renderer
+namespace Kritzel.Main.Renderer
 {
     public abstract class RenderBitmap : IDisposable
     {

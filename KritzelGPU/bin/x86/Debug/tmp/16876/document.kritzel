@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Pages>
+    <Page src="Page0.xml" pdf="-1" />
+    <Page src="Page1.xml" pdf="0" />
+    <Page src="Page2.xml" pdf="1" />
+  </Pages>
+</Document>

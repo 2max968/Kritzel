@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kritzel
+namespace Kritzel.Main
 {
     public class PBrush
     {

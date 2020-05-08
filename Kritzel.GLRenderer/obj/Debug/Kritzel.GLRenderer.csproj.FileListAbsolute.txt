@@ -1,0 +1,14 @@
+C:\Users\milky\source\repos\Kritzel\PInvokeGL\bin\Debug\Kritzel.GLRenderer.dll
+C:\Users\milky\source\repos\Kritzel\PInvokeGL\bin\Debug\Kritzel.GLRenderer.pdb
+C:\Users\milky\source\repos\Kritzel\PInvokeGL\obj\Debug\Kritzel.GLRenderer.csprojAssemblyReference.cache
+C:\Users\milky\source\repos\Kritzel\PInvokeGL\obj\Debug\Kritzel.GLRenderer.csproj.CoreCompileInputs.cache
+C:\Users\milky\source\repos\Kritzel\PInvokeGL\obj\Debug\Kritzel.GLRenderer.dll
+C:\Users\milky\source\repos\Kritzel\PInvokeGL\obj\Debug\Kritzel.GLRenderer.pdb
+C:\Users\milky\source\repos\Kritzel\PInvokeGL\bin\Debug\Kritzel.OpenGl32.dll
+C:\Users\milky\source\repos\Kritzel\Kritzel.GLRenderer\bin\Debug\Kritzel.OpenGl32.dll
+C:\Users\milky\source\repos\Kritzel\Kritzel.GLRenderer\bin\Debug\Kritzel.GLRenderer.dll
+C:\Users\milky\source\repos\Kritzel\Kritzel.GLRenderer\bin\Debug\Kritzel.GLRenderer.pdb
+C:\Users\milky\source\repos\Kritzel\Kritzel.GLRenderer\obj\Debug\Kritzel.GLRenderer.csprojAssemblyReference.cache
+C:\Users\milky\source\repos\Kritzel\Kritzel.GLRenderer\obj\Debug\Kritzel.GLRenderer.csproj.CoreCompileInputs.cache
+C:\Users\milky\source\repos\Kritzel\Kritzel.GLRenderer\obj\Debug\Kritzel.GLRenderer.dll
+C:\Users\milky\source\repos\Kritzel\Kritzel.GLRenderer\obj\Debug\Kritzel.GLRenderer.pdb

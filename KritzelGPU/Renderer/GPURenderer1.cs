@@ -12,7 +12,7 @@ using SlimDX;
 using gdi2d = System.Drawing.Drawing2D;
 using text = SlimDX.DirectWrite;
 
-namespace Kritzel.Renderer
+namespace Kritzel.Main.Renderer
 {
     public class GPURenderer1 : GPURenderer
     {

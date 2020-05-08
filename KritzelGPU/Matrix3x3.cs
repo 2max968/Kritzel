@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 
-namespace Kritzel
+namespace Kritzel.Main
 {
     public class Matrix3x3
     {

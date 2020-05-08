@@ -1,0 +1,17 @@
+C:\Users\milky\source\repos\Kritzel\WebInterface\obj\Debug\WebInterface.csprojAssemblyReference.cache
+C:\Users\milky\source\repos\Kritzel\WebInterface\obj\Debug\WebInterface.WebDialog.resources
+C:\Users\milky\source\repos\Kritzel\WebInterface\obj\Debug\WebInterface.csproj.GenerateResource.cache
+C:\Users\milky\source\repos\Kritzel\WebInterface\obj\Debug\WebInterface.csproj.CoreCompileInputs.cache
+C:\Users\milky\source\repos\Kritzel\WebInterface\bin\Debug\Interface\AddPage.zip
+C:\Users\milky\source\repos\Kritzel\WebInterface\bin\Debug\Interface\content.zip
+C:\Users\milky\source\repos\Kritzel\WebInterface\bin\Debug\Interface\global.zip
+C:\Users\milky\source\repos\Kritzel\WebInterface\bin\Debug\Interface\Seite2.zip
+C:\Users\milky\source\repos\Kritzel\WebInterface\bin\Debug\WebInterface.dll
+C:\Users\milky\source\repos\Kritzel\WebInterface\bin\Debug\WebInterface.pdb
+C:\Users\milky\source\repos\Kritzel\WebInterface\bin\Debug\Ionic.Zip.dll
+C:\Users\milky\source\repos\Kritzel\WebInterface\bin\Debug\SimpleHTTPServer.dll
+C:\Users\milky\source\repos\Kritzel\WebInterface\bin\Debug\SimpleHTTPServer.pdb
+C:\Users\milky\source\repos\Kritzel\WebInterface\obj\Debug\WebInterface.csproj.CopyComplete
+C:\Users\milky\source\repos\Kritzel\WebInterface\obj\Debug\WebInterface.dll
+C:\Users\milky\source\repos\Kritzel\WebInterface\obj\Debug\WebInterface.pdb
+C:\Users\milky\source\repos\Kritzel\WebInterface\bin\Debug\Interface\ColorPicker.zip

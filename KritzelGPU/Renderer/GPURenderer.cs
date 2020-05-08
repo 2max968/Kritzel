@@ -8,7 +8,7 @@ using PointF = System.Drawing.PointF;
 using RectangleF = System.Drawing.RectangleF;
 using gdi2d = System.Drawing.Drawing2D;
 
-namespace Kritzel.Renderer
+namespace Kritzel.Main.Renderer
 {
     public abstract class GPURenderer : BaseRenderer, IDisposable
     {

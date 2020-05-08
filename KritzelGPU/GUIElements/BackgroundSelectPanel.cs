@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Reflection;
 
-namespace Kritzel.GUIElements
+namespace Kritzel.Main.GUIElements
 {
     public partial class BackgroundSelectPanel : UserControl
     {

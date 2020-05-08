@@ -1,0 +1,81 @@
+body
+{
+	font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+	font-size: 5mm;
+	background-color:silver;
+	-ms-user-select: none;
+}
+
+#btnOK
+{
+	position: fixed;
+	display: block;
+	border: hidden;
+	background-color:steelblue;
+	color: white;
+	border-radius: 2.5mm;
+	right: 2mm;
+	bottom: 2mm;
+	height: 7.5mm;
+	width: 25mm;
+	cursor: pointer;
+}
+#btnOK:hover
+{
+	background-color: slategray;
+}
+
+#btnCancel
+{
+	position: fixed;
+	display: block;
+	border: 0.5mm solid steelblue;
+	background-color: white;
+	color: steelblue;
+	border-radius: 2.5mm;
+	right: 29mm;
+	bottom: 2mm;
+	height: 7.5mm;
+	width: 25mm;
+	cursor: pointer;
+}
+#btnCancel:hover
+{
+	color: slategray;
+	border-color: slategray;
+}
+
+.selector
+{
+	width: 50mm;
+	height: 7.5mm;
+	font-size: 6mm;
+}
+
+.container
+{
+	display: block;
+	position: absolute;
+	left: 0px;
+	width: calc(100% - 4mm);
+	top: 0px;
+	bottom: 11.5mm;
+	overflow-y: auto;
+	background-color: rgb(212, 212, 212);
+	padding: 2mm;
+}
+
+.container2
+{
+	top: 11.5mm;
+    bottom: 0mm;
+}
+
+input[type='radio']
+{
+	display: inline-block;
+	width: 7.5mm;
+	height: 7.5mm;
+	visibility: visible;
+	vertical-align: middle;
+}

@@ -4,9 +4,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Kritzel.Renderer;
+using Kritzel.Main.Renderer;
 
-namespace Kritzel.Backgrounds
+namespace Kritzel.Main.Backgrounds
 {
     [BName("Ruled Title 15mm")]
     public class BackgroundRuledTitle15mm : Background

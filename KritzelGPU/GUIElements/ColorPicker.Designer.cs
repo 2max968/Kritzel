@@ -1,4 +1,4 @@
-﻿namespace Kritzel.GUIElements
+﻿namespace Kritzel.Main.GUIElements
 {
     partial class ColorPicker
     {

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kritzel
+namespace Kritzel.Main
 {
     public class LPoint
     {
@@ -167,13 +167,6 @@ namespace Kritzel
 
         void sc(Renderer.BaseRenderer g, LPoint p1, LPoint p2, float quality, bool highlight, float border = 0)
         {
-            /*if(highlight)
-            {
-                PBrush tmp = Brush;
-                Brush = new PBrush("solid", new Color[] { Color.BlueViolet }, new float[0]);
-                sc(g, p1, p2, quality, false, 2);
-                Brush = tmp;
-            }*/
             if (p1.Outside && p2.Outside) return;
             if (Spline != null)
             {
@@ -213,10 +206,34 @@ namespace Kritzel
         {
             if (!Bounds.Contains(pt.X, pt.Y))
                 return false;
-            foreach (LPoint p in Points)
+
+            double x, y;
+            if (Points.Count > 1)
             {
-                if (p.Dist(pt) < p.Rad + pt.Rad)
+                for (int i = 0; i < Points.Count - 1; i++)
+                {
+                    float dist = Points[i].Dist(Points[i + 1]);
+                    float rad = Math.Max(Points[i].Rad, Points[i + 1].Rad);
+                    for (float t = i; t < i + 1; t += 10f / dist)
+                    {
+                        if (Spline != null)
+                            Spline.GetPoint(t, out x, out y);
+                        else
+                        {
+                            x = Points[i].X * (t - i) + Points[i + 1].X * (1 - t + i);
+                            y = Points[i].Y * (t - i) + Points[i + 1].Y * (1 - t + i);
+                        }
+                        if (pt.Dist((float)x, (float)y) < rad + pt.Rad)
+                            return true;
+                    }
+                }
+            }
+            else if(Points.Count == 1)
+            {
+                if(pt.Dist(Points[0]) < pt.Rad + pt.Rad)
+                {
                     return true;
+                }
             }
             return false;
         }
@@ -304,6 +321,7 @@ namespace Kritzel
         {
             if (Points.Count <= 0) return;
             RectangleF bounds = new RectangleF(Points[0].ToPointF(), new SizeF(0, 0));
+            float maxRad = 0;
             for(int i = 0; i < Points.Count; i++)
             {
                 if (Points[i].Outside) continue;
@@ -313,8 +331,9 @@ namespace Kritzel
                 if (x > bounds.Right) bounds.Width = x - bounds.X;
                 if (y < bounds.Top) { bounds.Height += bounds.Y - y; bounds.Y = y; }
                 if (y > bounds.Bottom) bounds.Height = y - bounds.Y;
+                if (Points[i].Rad > maxRad) maxRad = Points[i].Rad;
             }
-            this.bounds = bounds;
+            this.bounds = bounds.Expand(maxRad);
         }
 
         public virtual bool RefreshInEditor()

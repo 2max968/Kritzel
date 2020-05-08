@@ -1,4 +1,4 @@
-﻿using PointerInputLibrary;
+﻿using Kritzel.PointerInputLibrary;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 
-namespace Kritzel
+namespace Kritzel.Main
 {
     public enum InkMode { Pen, Line, Rect, Arc };
 
@@ -43,8 +43,8 @@ namespace Kritzel
                 var s = page.Format.GetPixelSize();
             }
         }
-        Matrix3x3 transform = new Matrix3x3();
-        Matrix3x3 stableTransform = new Matrix3x3();
+        volatile Matrix3x3 transform = new Matrix3x3();
+        volatile Matrix3x3 stableTransform = new Matrix3x3();
         bool lastMove = false;
         Point lastMovePoint = new Point(0, 0);
         bool lastTrans = false;
@@ -69,10 +69,10 @@ namespace Kritzel
         public Renderer.GPURenderer gpuRenderer;
         Thread renderThread;
         Thread renderThread2;
-        bool running = true;
-        bool redraw = false;
-        bool fullredraw = false;
-        bool lockDraw = false;
+        volatile bool running = true;
+        volatile bool redraw = false;
+        volatile bool fullredraw = false;
+        volatile bool lockDraw = false;
         public bool LockDraw
         {
             get
@@ -90,7 +90,7 @@ namespace Kritzel
                 }
             }
         }
-        bool waiting = false;
+        volatile bool waiting = false;
         Renderer.RenderBitmap rbmp = null;
         RectangleF rBounds = RectangleF.Empty;
         Line tmpLine = null;
@@ -151,7 +151,7 @@ namespace Kritzel
                     Point delta = new Point(e.X - lastMousePos.X, e.Y - lastMousePos.Y);
                     Matrix3x3 m = Matrix3x3.Translation(delta.X, delta.Y);
                     transform *= m;
-                    recreateBuffer();
+                    recreateBufferFull();
                 }
                 lastMousePos = new Point(e.X, e.Y);
             }
@@ -168,11 +168,11 @@ namespace Kritzel
             if (factor < 500) factor = 500;
             factor /= 1000f;
             Matrix3x3 m = new Matrix3x3();
-            m *= Matrix3x3.Translation(e.X, e.Y);
-            m *= Matrix3x3.Scale(factor);
             m *= Matrix3x3.Translation(-e.X, -e.Y);
+            m *= Matrix3x3.Scale(factor);
+            m *= Matrix3x3.Translation(e.X, e.Y);
             transform *= m;
-            recreateBuffer();
+            recreateBufferFull();
         }
 
         private void InkControl_VisibleChanged(object sender, EventArgs e)
@@ -201,6 +201,7 @@ namespace Kritzel
         {
             // Search for Pen / Finger
             Touch pen = null;
+            Touch mouse = null;
             List<Touch> fingers = new List<Touch>();
             foreach (Touch t in pm.Touches.Values)
             {
@@ -211,6 +212,8 @@ namespace Kritzel
                 }
                 if (t.TouchDevice == TouchDevice.Finger)
                     fingers.Add(t);
+                if (t.TouchDevice == TouchDevice.Mouse && t.Down)
+                    mouse = t;
             }
 
             // Eraser
@@ -317,6 +320,8 @@ namespace Kritzel
             // Draw
             if (line != null)
             {
+                if (pen == null && mouse != null)
+                    pen = mouse;
                 if (pen != null)
                 {
                     float rad = line.CalcRad(pen.Pressure, Thicknes);
@@ -424,7 +429,7 @@ namespace Kritzel
         public void LoadFromString(string txt)
         {
             KPage p = new KPage();
-            p.LoadFromString(txt);
+            p.LoadFromString(txt, null);
             this.page = p;
             recreateBuffer();
             this.Refresh();
@@ -484,7 +489,7 @@ namespace Kritzel
 
                         waiting = false;
                         redraw = false;
-                        if (this.Height <= 0 || this.Width <= 0) return;
+                        //if (this.Height <= 0 || this.Width <= 0) return;
                         int vW = (int)(this.Width * BufferSize);
                         int vH = (int)(this.Height * BufferSize);
                         if (rbmp == null || vW != gpuRenderer.Width || vH != gpuRenderer.Height)

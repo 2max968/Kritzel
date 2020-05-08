@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 
-namespace Kritzel
+namespace Kritzel.Main
 {
     public static class Util
     {

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Kritzel
+namespace Kritzel.Main
 {
     public enum PickerOrientation { Vertical, Horizontal};
     public enum PickerType { Click, Select, Check};

@@ -1,4 +1,4 @@
-﻿namespace Kritzel.Dialogues
+﻿namespace Kritzel.Main.Dialogues
 {
     partial class LayoutEditor
     {
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.backgroundSelectPanel1 = new Kritzel.GUIElements.BackgroundSelectPanel();
+            this.backgroundSelectPanel1 = new Kritzel.Main.GUIElements.BackgroundSelectPanel();
             this.btnMinus = new System.Windows.Forms.Button();
             this.btnPlus = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();

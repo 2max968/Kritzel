@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kritzel.Forms
+namespace Kritzel.Main.Forms
 {
     public class Arc : LinearLine
     {

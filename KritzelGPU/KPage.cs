@@ -13,7 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace Kritzel
+namespace Kritzel.Main
 {
     public class KPage : IDisposable
     {
@@ -78,7 +78,7 @@ namespace Kritzel
             return output.ToString();
         }
 
-        public void LoadFromString(string txt)
+        public void LoadFromString(string txt, MessageLog log)
         {
             StringReader input = new StringReader(txt);
             Line line = null;
@@ -122,9 +122,19 @@ namespace Kritzel
                             Format = new PageFormat(w, h);
                             string backgroundName = xml.GetAttribute("background");
                             Type backgroundType = Type.GetType(backgroundName);
-                            Backgrounds.Background bgr = (Backgrounds.Background)backgroundType
-                                .GetConstructor(new Type[0])
-                                .Invoke(new object[0]);
+                            Backgrounds.Background bgr;
+                            if (backgroundType == null)
+                            {
+                                bgr = null;
+                                if (backgroundName != "null")
+                                    log?.Add(MessageType.WARN, "Background '{0}'", backgroundName);
+                            }
+                            else
+                            {
+                                bgr = (Backgrounds.Background)backgroundType
+                                    .GetConstructor(new Type[0])
+                                    .Invoke(new object[0]);
+                            }
                             Background = bgr;
                         }
                         else if(xml.Name == "CreationTime")
@@ -231,6 +241,16 @@ namespace Kritzel
 
             for (int i = 0; i < Lines.Count; i++)
                 Lines[i].Render(r);
+        }
+
+        public Bitmap GetThumbnail(int width, int height, Color background)
+        {
+            Bitmap thumb = new Bitmap(width, height);
+            Graphics g = Graphics.FromImage(thumb);
+            Renderer.GdiRenderer r = new Renderer.GdiRenderer(g);
+            g.Clear(background);
+            this.Draw(r);
+            return thumb;
         }
     }
 }

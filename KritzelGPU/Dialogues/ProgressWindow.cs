@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Kritzel.Dialogues
+namespace Kritzel.Main.Dialogues
 {
     public partial class ProgressWindow : Form
     {

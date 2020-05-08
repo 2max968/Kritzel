@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Kritzel.Properties {
+namespace Kritzel.Main.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Kritzel.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Kritzel.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Kritzel.Main.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -102,20 +102,22 @@ namespace Kritzel.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to #version 330 core
-        ///out vec4 color;
+        ///out vec3 color;
         ///
         ///varying vec2 v_texCoord;
         ///
         ///void main()
         ///{
-        ///    vec2 pos = v_texCoord - vec2(.5,.5);
+        ///    /*vec2 pos = v_texCoord - vec2(.5,.5);
         ///
         ///    float d = pos.x*pos.x+pos.y*pos.y;
         ///
         ///    if(d &gt; .25)
-        ///        color = vec4(1,1,1,0);
+        ///        color = vec4(1.,1.,1.,0.);
         ///    else
-        ///        color = vec4(1,1,1,1);
+        ///        color = vec4(1.,1.,1.,1.);*/
+        ///
+        ///	color = vec3(1.,0.,0.);
         ///}.
         /// </summary>
         internal static string ellipse_fs {
@@ -227,6 +229,7 @@ namespace Kritzel.Properties {
         /// <summary>
         ///   Looks up a localized string similar to #version 330 core
         ///layout (location = 0) in vec3 aPos;
+        ///in mat4 modelViewMatrix;
         ///
         ///out vec4 vertexColor;
         ///
@@ -234,8 +237,7 @@ namespace Kritzel.Properties {
         ///
         ///void main()
         ///{
-        ///    vec3 pos = aPos * vec3(2.,2.,1.) - vec3(1.,1.,0.);
-        ///    gl_Position = vec4(pos, 1.0);
+        ///    gl_Position = modelViewMatrix * vec4(aPos, 1.0);
         ///    vertexColor = vec4(1.,1.,1.,1.);
         ///    v_texCoord = aPos.xy;
         ///}.
@@ -243,6 +245,16 @@ namespace Kritzel.Properties {
         internal static string vertex_vs {
             get {
                 return ResourceManager.GetString("vertex_vs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WindowIcon {
+            get {
+                object obj = ResourceManager.GetObject("WindowIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

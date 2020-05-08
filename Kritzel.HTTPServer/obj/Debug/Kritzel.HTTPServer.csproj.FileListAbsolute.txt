@@ -1,0 +1,16 @@
+C:\Users\milky\source\repos\Kritzel\SimpleHTTPServer\bin\Debug\Kritzel.HTTPServer.dll
+C:\Users\milky\source\repos\Kritzel\SimpleHTTPServer\bin\Debug\Kritzel.HTTPServer.pdb
+C:\Users\milky\source\repos\Kritzel\SimpleHTTPServer\obj\Debug\SimpleHttp.Properties.Resources.resources
+C:\Users\milky\source\repos\Kritzel\SimpleHTTPServer\obj\Debug\Kritzel.HTTPServer.csproj.GenerateResource.cache
+C:\Users\milky\source\repos\Kritzel\SimpleHTTPServer\obj\Debug\Kritzel.HTTPServer.csproj.CoreCompileInputs.cache
+C:\Users\milky\source\repos\Kritzel\SimpleHTTPServer\obj\Debug\Kritzel.HTTPServer.dll
+C:\Users\milky\source\repos\Kritzel\SimpleHTTPServer\obj\Debug\Kritzel.HTTPServer.pdb
+C:\Users\milky\source\repos\Kritzel\SimpleHTTPServer\obj\Debug\Kritzel.HTTPServer.csprojAssemblyReference.cache
+C:\Users\milky\source\repos\Kritzel\Kritzel.HTTPServer\bin\Debug\Kritzel.HTTPServer.dll
+C:\Users\milky\source\repos\Kritzel\Kritzel.HTTPServer\bin\Debug\Kritzel.HTTPServer.pdb
+C:\Users\milky\source\repos\Kritzel\Kritzel.HTTPServer\obj\Debug\Kritzel.HTTPServer.csprojAssemblyReference.cache
+C:\Users\milky\source\repos\Kritzel\Kritzel.HTTPServer\obj\Debug\Kritzel.HTTPServer.Properties.Resources.resources
+C:\Users\milky\source\repos\Kritzel\Kritzel.HTTPServer\obj\Debug\Kritzel.HTTPServer.csproj.GenerateResource.cache
+C:\Users\milky\source\repos\Kritzel\Kritzel.HTTPServer\obj\Debug\Kritzel.HTTPServer.csproj.CoreCompileInputs.cache
+C:\Users\milky\source\repos\Kritzel\Kritzel.HTTPServer\obj\Debug\Kritzel.HTTPServer.dll
+C:\Users\milky\source\repos\Kritzel\Kritzel.HTTPServer\obj\Debug\Kritzel.HTTPServer.pdb

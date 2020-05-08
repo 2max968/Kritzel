@@ -1,4 +1,4 @@
-﻿using PInvokeGL;
+﻿using Kritzel.GLRenderer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +11,7 @@ using gdi2d = System.Drawing.Drawing2D;
 using PointF = System.Drawing.PointF;
 using RectangleF = System.Drawing.RectangleF;
 
-namespace Kritzel.Renderer
+namespace Kritzel.Main.Renderer
 {
     public class GPURenderer3 : GPURenderer
     {
@@ -53,7 +53,7 @@ namespace Kritzel.Renderer
             g.Clear(gdi.Color.Transparent);
             g.SmoothingMode = gdi2d.SmoothingMode.HighQuality;
             g.FillEllipse(gdi.Brushes.White, new RectangleF(1, 1, eSize-2, eSize-2));
-            texEllipse = PInvokeGL.Util.LoadTexture(ellipse);
+            texEllipse = Kritzel.GLRenderer.Util.LoadTexture(ellipse);
 
             int eDet = 16;
             pEllipseX = new float[3 * eDet];
@@ -236,7 +236,7 @@ namespace Kritzel.Renderer
             Matrix3x3 mat33 = new Matrix3x3(m.Elements[0], m.Elements[1], m.Elements[2],
                 m.Elements[3], m.Elements[4], m.Elements[5]);
             Transformation *= mat33;
-            PInvokeGL.Util.LoadMatrix3x3(mat33.GetRowMatrix());
+            Kritzel.GLRenderer.Util.LoadMatrix3x3(mat33.GetRowMatrix());
         }
 
         public override bool Begin()
@@ -366,7 +366,7 @@ namespace Kritzel.Renderer
             g.Clear(c2);
             g.DrawString(str, ft, b, new PointF(0, 0));
 
-            int tex = PInvokeGL.Util.LoadTexture(bmp);
+            int tex = Kritzel.GLRenderer.Util.LoadTexture(bmp);
             Opengl32.glEnable(GLConsts.GL_TEXTURE_2D);
             Opengl32.glBindTexture(GLConsts.GL_TEXTURE_2D, tex);
             rect = new RectangleF(rect.X, rect.Y, s.Width, s.Height);

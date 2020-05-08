@@ -12,10 +12,11 @@ using PdfSharp.Pdf;
 using pdf = PdfSharp.Pdf;
 using pdf_io = PdfSharp.Pdf.IO;
 
-namespace Kritzel.Dialogues
+namespace Kritzel.Main.Dialogues
 {
     public partial class PDFImporter : Form
     {
+        public const int PAGETHEIGHTPIXEL = 3450;
         string path;
         public KPage[] Pages { get; private set; }
 
@@ -59,7 +60,7 @@ namespace Kritzel.Dialogues
                     pageIndexes.Add(i);
                 }
             }
-            Bitmap[] bmps = MupdfSharp.PageRenderer.Render(path, 3450, pageIndexes.ToArray());
+            Bitmap[] bmps = MupdfSharp.PageRenderer.Render(path, PAGETHEIGHTPIXEL, pageIndexes.ToArray());
 
             Pages = new KPage[pageIndexes.Count];
             pdf.PdfDocument pdfdoc = pdf_io.PdfReader.Open(path, pdf_io.PdfDocumentOpenMode.Modify | pdf_io.PdfDocumentOpenMode.Import);

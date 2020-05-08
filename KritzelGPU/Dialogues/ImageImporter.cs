@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PdfSharp.Drawing;
+using PdfSharp.Pdf;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,13 +10,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Kritzel.Dialogues
+namespace Kritzel.Main.Dialogues
 {
     public partial class ImageImporter : Form
     {
         public PageFormat Format { get; private set; }
         public Bitmap EditetImage { get; private set; }
         Bitmap original;
+        public PdfPage Page;
 
         public ImageImporter(Bitmap bmp)
         {

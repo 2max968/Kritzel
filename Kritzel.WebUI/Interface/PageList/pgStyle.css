@@ -1,0 +1,16 @@
+button
+{
+	display: inline-block;
+	border: 0.5mm solid steelblue;
+	background-color: white;
+	color: steelblue;
+	border-radius: 2.5mm;
+	height: 7.5mm;
+	width: 25mm;
+	cursor: pointer;
+}
+button:hover
+{
+	color: slategray;
+	border-color: slategray;
+}

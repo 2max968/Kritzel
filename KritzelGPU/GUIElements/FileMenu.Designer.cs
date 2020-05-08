@@ -1,4 +1,4 @@
-﻿namespace Kritzel.GUIElements
+﻿namespace Kritzel.Main.GUIElements
 {
     partial class FileMenu
     {
@@ -86,7 +86,7 @@
             // btnClose
             // 
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnClose.Image = global::Kritzel.Properties.Resources.icoMenu;
+            this.btnClose.Image = global::Kritzel.Main.Properties.Resources.icoMenu;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClose.Location = new System.Drawing.Point(0, 0);
             this.btnClose.Name = "btnClose";

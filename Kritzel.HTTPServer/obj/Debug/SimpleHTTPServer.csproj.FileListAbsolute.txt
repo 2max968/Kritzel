@@ -1,0 +1,16 @@
+C:\Users\milky\source\repos\SimpleHTTPServer\SimpleHTTPServer\bin\Debug\SimpleHTTPServer.dll
+C:\Users\milky\source\repos\SimpleHTTPServer\SimpleHTTPServer\bin\Debug\SimpleHTTPServer.pdb
+C:\Users\milky\source\repos\SimpleHTTPServer\SimpleHTTPServer\obj\Debug\SimpleHTTPServer.csproj.CoreCompileInputs.cache
+C:\Users\milky\source\repos\SimpleHTTPServer\SimpleHTTPServer\obj\Debug\SimpleHTTPServer.dll
+C:\Users\milky\source\repos\SimpleHTTPServer\SimpleHTTPServer\obj\Debug\SimpleHTTPServer.pdb
+C:\Users\milky\source\repos\SimpleHTTPServer\SimpleHTTPServer\obj\Debug\SimpleHTTPServer.csproj.GenerateResource.cache
+C:\Users\milky\source\repos\SimpleHTTPServer\SimpleHTTPServer\obj\Debug\SimpleHTTPServer.csprojResolveAssemblyReference.cache
+C:\Users\milky\source\repos\SimpleHTTPServer\SimpleHTTPServer\obj\Debug\SimpleHttp.Properties.Resources.resources
+C:\Users\milky\source\repos\Kritzel\SimpleHTTPServer\bin\Debug\SimpleHTTPServer.dll
+C:\Users\milky\source\repos\Kritzel\SimpleHTTPServer\bin\Debug\SimpleHTTPServer.pdb
+C:\Users\milky\source\repos\Kritzel\SimpleHTTPServer\obj\Debug\SimpleHTTPServer.csprojAssemblyReference.cache
+C:\Users\milky\source\repos\Kritzel\SimpleHTTPServer\obj\Debug\SimpleHttp.Properties.Resources.resources
+C:\Users\milky\source\repos\Kritzel\SimpleHTTPServer\obj\Debug\SimpleHTTPServer.csproj.GenerateResource.cache
+C:\Users\milky\source\repos\Kritzel\SimpleHTTPServer\obj\Debug\SimpleHTTPServer.csproj.CoreCompileInputs.cache
+C:\Users\milky\source\repos\Kritzel\SimpleHTTPServer\obj\Debug\SimpleHTTPServer.dll
+C:\Users\milky\source\repos\Kritzel\SimpleHTTPServer\obj\Debug\SimpleHTTPServer.pdb

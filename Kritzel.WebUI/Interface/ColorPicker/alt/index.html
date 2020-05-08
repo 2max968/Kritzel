@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Colors - Alt</title>
+        <link rel="stylesheet" type="text/css" href="/global/style.css">
+        <link rel="stylesheet" type="text/css" href="cpStyle.css">
+    </head>
+
+    <body>
+        <div class='container'>
+            <div class="show">
+                <div id="showOld">
+
+                </div>
+                <div id="showNew">
+
+                </div>
+            </div>
+            <div id="tabs">
+                <div id="tabGrid" class="cp" onclick="showTab(cc);"><img src="cpGrid.png" class="buttonImg" /></div>
+                <div id="colorWheel" class="cp" onclick="showTab(cs);setSliders();"><img src="cpSlider.png" class="buttonImg" /></div>
+            </div>
+            <div id="cc" name="tabpage">
+                <!-- Elements added by script -->
+            </div>
+            <div id="cs" name="tabpage">
+                <label for="sliderR">Red:</label><br/>
+                <input type="range" min="0" max="255" id="sliderR" class="slider" onchange="sliderChanged(1);"/><br/>
+                <label for="sliderG">Green:</label><br/>
+                <input type="range" min="0" max="255" id="sliderG" class="slider" onchange="sliderChanged(2);"/><br/>
+                <label for="sliderB">Blue:</label><br/>
+                <input type="range" min="0" max="255" id="sliderB" class="slider" onchange="sliderChanged(3);"/><br/>
+            </div>
+            <form method='get' action="/ok">
+                <input type="hidden" name="test" value="test" />
+                <input type="hidden" name="color", id="inpColor" />
+                <input type='submit' value='Select' id='btnOK'/>
+            </form>
+
+            <form method='get' action="/cancel">
+                <input type="submit" value='Cancel' id='btnCancel'/>
+            </form>
+        </div>
+
+        <script src="cpScript.js"></script>
+    </body>
+</html>

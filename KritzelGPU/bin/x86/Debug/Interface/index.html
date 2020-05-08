@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Kritzel</title>
+        <link href="/global/style.css" rel="stylesheet" />
+        <meta charset="UTF-8" />
+    </head>
+
+    <body>
+        <div class="container" id="container">
+            
+        </div>
+
+        <form method="get" action="/ok">
+            <input type="submit" value="--CANCEL--" id="btnCancel" name="btnCancel" />
+        </form>
+        <form method="get" action="/cancel">
+            <input type="submit" value="--OK--" id="btnOK" name="btnOk" />
+        </form>
+
+        <script>
+            var container = document.getElementById("container");
+            var btnOk = document.getElementsByName("btnOk")[0];
+            var btnCancel = document.getElementsByName("btnCancel")[0];
+            container.innerHTML = msg;
+            if(btnOkText)
+                btnOk.style.display = "none";
+            else
+                btnOk.value = btnOkText;
+            if(btnCancelText)
+                btnCancel.style.display = "none";
+            else
+                btnCancel.value = btnCancelText;
+        </script>
+    </body>
+</html>

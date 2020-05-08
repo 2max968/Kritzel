@@ -9,8 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
 using System.IO;
+using Kritzel.WebUI;
+using System.Globalization;
 
-namespace Kritzel.GUIElements
+namespace Kritzel.Main.GUIElements
 {
     public partial class ColorPicker : UserControl
     {
@@ -181,11 +183,38 @@ namespace Kritzel.GUIElements
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            ColorDialog cd = new ColorDialog();
-            if(cd.ShowDialog() == DialogResult.OK)
+            WebDialog cp = new WebDialog("Interface/ColorPicker.zip");
+            //cp["colors"] = new Color[] { Color.Red, Color.Orange, Color.Blue, Color.Black };
+            //cp["currentColor"] = Color.Black;
+            if(cp.ShowDialog() == DialogResult.OK)
             {
-                Add(cd.Color);
-                save();
+                if (!cp.Vars.ContainsKey("more"))
+                {
+                    string colorStr = cp["color", "000000"];
+                    if (colorStr.Length == 6)
+                    {
+                        string sr = "" + colorStr.Substring(0, 2);
+                        string sg = "" + colorStr.Substring(2, 2);
+                        string sb = "" + colorStr.Substring(4, 2);
+
+                        int r, g, b;
+                        int.TryParse(sr, NumberStyles.AllowHexSpecifier, CultureInfo.CurrentCulture, out r);
+                        int.TryParse(sg, NumberStyles.AllowHexSpecifier, CultureInfo.CurrentCulture, out g);
+                        int.TryParse(sb, NumberStyles.AllowHexSpecifier, CultureInfo.CurrentCulture, out b);
+                        Color c = Color.FromArgb(r, g, b);
+                        Add(c);
+                        save();
+                    }
+                }
+                else
+                {
+                    ColorDialog cd = new ColorDialog();
+                    if (cd.ShowDialog() == DialogResult.OK)
+                    {
+                        Add(cd.Color);
+                        save();
+                    }
+                }
             }
         }
 

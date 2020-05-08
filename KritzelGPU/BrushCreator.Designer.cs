@@ -1,4 +1,4 @@
-﻿namespace Kritzel
+﻿namespace Kritzel.Main
 {
     partial class BrushCreator
     {

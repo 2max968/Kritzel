@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Kritzel
+namespace Kritzel.Main
 {
     public partial class MainWindow : Form
     {
@@ -25,6 +25,7 @@ namespace Kritzel
         public MainWindow()
         {
             InitializeComponent();
+            this.Icon = Program.WindowIcon;
 
             Bitmap[] bmpSizes = new Bitmap[4];
             for(int i = 0; i < bmpSizes.Length; i++)
@@ -52,6 +53,7 @@ namespace Kritzel
             Bitmap[] pageControlItms = new Bitmap[]
             {
                 Properties.Resources.arrow_up,
+                new Bitmap(64,64),
                 Properties.Resources.arrow_down
             };
             pageSelect.Fill(pageControlItms);
@@ -75,6 +77,7 @@ namespace Kritzel
 
         private void MainWindow_Shown(object sender, EventArgs e)
         {
+            Kritzel.WebUI.WebDialog.ScaleFactor = Util.GetScaleFactor();
             inkControl1.InitRenderer();
         }
 
@@ -92,10 +95,27 @@ namespace Kritzel
                     if (current > 0)
                         inkControl1.LoadPage(doc.Pages[current - 1]);
                 }
-                else if (ind == 1)
+                else if (ind == 2)
                 {
                     if (current < doc.Pages.Count - 1)
                         inkControl1.LoadPage(doc.Pages[current + 1]);
+                }
+                else if(ind == 1)
+                {
+                    if(doc.Pages.Count <= 1)
+                    {
+                        Dialogues.MsgBox.ShowOk("Cant delete last page");
+                    }
+                    else if(Dialogues.MsgBox.ShowYesNo("Do you want to remove this Page?"))
+                    {
+                        KPage todel = doc.Pages[current];
+                        int newP = current - 1;
+                        if (current == 0) newP = 1;
+                        inkControl1.LoadPage(doc.Pages[newP]);
+                        if (current > 0) current--;
+                        doc.Pages.Remove(todel);
+                        todel.Dispose();
+                    }
                 }
             }
         }
@@ -123,7 +143,7 @@ namespace Kritzel
             {
                 this.FormBorderStyle = FormBorderStyle.Sizable;
                 this.WindowState = tmpWindowState;
-                btnFullscreen.Image = Properties.Resources.ArrowsExpand;
+                btnFullscreen.BackgroundImage = Properties.Resources.ArrowsExpand;
             }
             else
             {
@@ -131,7 +151,7 @@ namespace Kritzel
                 this.WindowState = FormWindowState.Normal;
                 this.FormBorderStyle = FormBorderStyle.None;
                 this.WindowState = FormWindowState.Maximized;
-                btnFullscreen.Image = Properties.Resources.arrowShrink;
+                btnFullscreen.BackgroundImage = Properties.Resources.arrowShrink;
             }
         }
 
@@ -161,19 +181,19 @@ namespace Kritzel
 
         private void strokeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            btnFormType.Image = Properties.Resources.Pen;
+            btnFormType.BackgroundImage = Properties.Resources.Pen;
             inkControl1.InkMode = InkMode.Pen;
         }
 
         private void lineToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            btnFormType.Image = Properties.Resources.Line;
+            btnFormType.BackgroundImage = Properties.Resources.Line;
             inkControl1.InkMode = InkMode.Line;
         }
 
         private void rectangleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            btnFormType.Image = Properties.Resources.Rect;
+            btnFormType.BackgroundImage = Properties.Resources.Rect;
             inkControl1.InkMode = InkMode.Rect;
         }
 
@@ -186,7 +206,7 @@ namespace Kritzel
                 if(ext == ".zip")
                 {
                     KDocument doc = new KDocument();
-                    doc.LoadDocument(diagOpenDoc.FileName);
+                    doc.LoadDocument(diagOpenDoc.FileName, null);
                     this.doc = doc;
                     inkControl1.LoadPage(doc.Pages[0]);
                 }
